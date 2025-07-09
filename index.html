@@ -1,59 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arbor LetMi</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-    header { background: #003057; color: white; padding: 1em; text-align: center; }
-    nav a { color: white; margin: 0 15px; text-decoration: none; }
-    .logo { max-height: 80px; }
-    .gallery { display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; }
-    .gallery img { width: 300px; margin: 10px; border-radius: 10px; }
-    form { max-width: 400px; margin: auto; padding: 20px; background: white; border-radius: 10px; }
-    footer { background: #003057; color: white; text-align: center; padding: 10px; margin-top: 40px; }
-    .contact { text-align: center; margin: 20px; }
-    input, textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f3f3f3; }
+    header { background-color: #003f5c; padding: 20px; text-align: center; color: white; }
+    header img { max-height: 100px; }
+    section { padding: 20px; max-width: 1000px; margin: auto; }
+    h2 { color: #003f5c; }
+    .gallery img { max-width: 100%; height: auto; margin-bottom: 15px; border: 2px solid #ccc; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    footer { background: #003f5c; color: white; text-align: center; padding: 15px; margin-top: 40px; }
+    form input, form textarea { width: 100%; padding: 10px; margin-bottom: 10px; }
+    form button { background: #0077b6; color: white; padding: 10px 20px; border: none; cursor: pointer; }
   </style>
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Arbor LetMi logó" class="logo">
-    <h1>Arbor LetMi</h1>
-    <p>Gyors, precíz munkavégzés – 2-3x olcsóbb, mint a konkurens cégek</p>
-    <nav>
-      <a href="#galeria">Galéria</a>
-      <a href="#ajanlat">Ajánlatkérés</a>
-      <a href="#kapcsolat">Kapcsolat</a>
-    </nav>
-  </header>
 
-  <section id="galeria" class="gallery">
-    <img src="fa1.jpg" alt="Favágás 1">
-    <img src="fa2.jpg" alt="Favágás 2">
-    <img src="fa3.jpg" alt="Favágás 3">
-  </section>
+<header>
+  <img src="logó.png" alt="Arbor LetMi logó">
+  <h1>Arbor LetMi</h1>
+  <p>Gyors, precíz munkavégzés – 2-3x olcsóbb, mint a konkurens cégek</p>
+</header>
 
-  <section id="ajanlat">
-    <form>
-      <h2>Árajánlat kérés</h2>
-      <input type="text" placeholder="Név" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Üzenet" rows="5" required></textarea>
-      <button type="submit">Küldés</button>
-    </form>
-  </section>
+<section>
+  <h2>Rólunk</h2>
+  <p>Szakszerű lakott területi fakivágás, gallyazás, zöldterület-kezelés, ágdarálás és tuskómarás – gyorsan, igényesen, profi gépekkel, akár 0–24 elérhetőséggel.</p>
+</section>
 
-  <section id="kapcsolat" class="contact">
-    <h2>Kapcsolat</h2>
-    <p>Telefon: +36 30 217 7367</p>
-    <p>Email: hege340@gmail.com</p>
-  </section>
+<section>
+  <h2>Szolgáltatásaink</h2>
+  <ul>
+    <li>Fakivágás, gallyazás, tuskómarás</li>
+    <li>Kuglizás, bozótirtás, kaszálás</li>
+    <li>Ágdarálás, zöldhulladék elszállítás</li>
+    <li>Ingyenes helyszíni felmérés, gyors árajánlat</li>
+  </ul>
+</section>
 
-  <footer>
-    &copy; 2025 Arbor LetMi. Minden jog fenntartva.
-  </footer>
+<section>
+  <h2>Képgaléria</h2>
+  <div class="gallery">
+    <img src="fa1.jpg" alt="Munka közben">
+    <img src="fa2.jpg" alt="Favágás">
+    <img src="fa3.jpg" alt="Tuskómarás">
+  </div>
+</section>
+
+<section>
+  <h2>Kapcsolat</h2>
+  <p><strong>Telefonszám:</strong> +36 30 217 7367</p>
+  <p><strong>E-mail:</strong> hege340@gmail.com</p>
+  <p><strong>Szolgáltatási terület:</strong> Győr-Moson-Sopron vármegye (Győr, Sopron, Fertőd, Veszprém, Mosonmagyaróvár, Komárom, Ács stb.)</p>
+</section>
+
+<section>
+  <h2>Árajánlatkérés</h2>
+  <form action="mailto:hege340@gmail.com" method="post" enctype="text/plain">
+    <input type="text" name="Név" placeholder="Név" required>
+    <input type="email" name="Email" placeholder="Email" required>
+    <textarea name="Üzenet" placeholder="Írd le mire van szükség" rows="5" required></textarea>
+    <button type="submit">Küldés</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Arbor LetMi – Minden jog fenntartva.
+</footer>
+
 </body>
 </html>
